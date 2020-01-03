@@ -10,7 +10,7 @@ pipeline {
     stage('Build') {
       steps {
         sh '''apt update
-apt install apache2 curl net-tools
+apt install -y apache2 curl net-tools
 cp ./index.html /var/www/html/
 /etc/init.d/apache2 start'''
       }
